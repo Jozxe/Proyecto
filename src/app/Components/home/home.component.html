@@ -1,0 +1,16 @@
+<app-header></app-header>
+  
+  <div style="margin-top: 10px;" class="container">
+    <p class="fw-normal">!Hola, Bienvenido</p>
+
+    <div *ngIf="loading" class="spinner-border text-center" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <div *ngFor="let item of ListaPlatillos" style="margin-top: 10px;" class="alert alert-primary" role="alert">
+      Platillo del Día
+      <br>
+      <img [src]="item.strMealThumb" style="max-width: 100px; max-height: 100px; margin-right: 10px;" class="w-100 img-fluid" alt="">
+      <a [routerLink]="['/detalle/'+item.idMeal]" class="alert-link">{{item.strMeal}}</a>
+    </div>
+  </div>

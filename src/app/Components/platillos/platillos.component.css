@@ -1,0 +1,8 @@
+.scroll{
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.top{
+    margin-top: 30px;;
+}
